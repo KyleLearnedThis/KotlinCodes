@@ -1,7 +1,5 @@
 package com.albion.ds.tree.bst
 
-import com.albion.ds.bst.BinarySearchTree
-import com.albion.ds.bst.BinaryTreePrinter
 import org.junit.Assert
 import org.junit.Test
 
