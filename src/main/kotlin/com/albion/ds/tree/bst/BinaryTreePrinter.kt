@@ -1,4 +1,4 @@
-package com.albion.ds.bst
+package com.albion.ds.tree.bst
 
 import java.util.*
 
