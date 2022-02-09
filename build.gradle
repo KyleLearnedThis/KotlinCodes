@@ -1,0 +1,23 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+}
+
+group 'com.albion.labs'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
+    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
+    implementation "com.squareup.okhttp3:okhttp:4.6.0"
+    implementation "com.squareup.retrofit2:retrofit:2.7.1"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.7.1"
+    implementation "com.squareup.retrofit2:converter-gson:2.7.1"
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
