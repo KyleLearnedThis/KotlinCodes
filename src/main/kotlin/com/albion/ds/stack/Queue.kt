@@ -18,4 +18,8 @@ class Queue<T> {
     }
 
     fun size() = queue.size
+
+    fun isEmpty(): Boolean {
+        return queue.size == 0
+    }
 }
