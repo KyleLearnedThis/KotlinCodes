@@ -21,7 +21,7 @@ class KeyboardRow {
     private fun isSameRow(input: String, row: String): Boolean {
         for(i in input.indices) {
             val x = input[i]
-            if(row.toCharArray().contains(x.toLowerCase()) || row.toCharArray().contains(x.toUpperCase()) ) {
+            if(row.toCharArray().contains(x.toLowerCase()) || row.toCharArray().contains(x.uppercaseChar()) ) {
                 continue
             } else {
                 return false

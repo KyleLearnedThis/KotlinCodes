@@ -7,9 +7,9 @@ class ProductSumDifference {
             val m = n.toString()
             var product = 1
             var sum = 0
-            val base = '0'.toInt()
+            val base = '0'.code
             for( c in m.toCharArray()) {
-                val cur = c.toInt() - base
+                val cur = c.code - base
                 product *= cur
                 sum += cur
             }

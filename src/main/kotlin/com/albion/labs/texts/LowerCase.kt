@@ -4,7 +4,7 @@ class LowerCase {
     fun toLowerCase(str: String): String {
         val charArray = str.toCharArray()
         for (i in charArray.indices) {
-            charArray[i] = charArray[i].toLowerCase()
+            charArray[i] = charArray[i].lowercaseChar()
         }
         return String(charArray)
     }

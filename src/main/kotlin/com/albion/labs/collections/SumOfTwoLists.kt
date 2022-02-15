@@ -34,7 +34,7 @@ class SumOfTwoLists {
             val sum = x1 + y1
             val input = sum.toString()
                 .toCharArray()
-                .map { it.toInt() - 48 }
+                .map { it.code - 48 }
                 .reversed()
             return IntList(input.toTypedArray())
         }
