@@ -27,6 +27,36 @@ class MedianOfTwoSortedArrays {
                 A[o].toDouble()
             }
         }
-    }
 
+        fun findMedianSortedArraysV2(A: IntArray, B: IntArray): Double {
+            val m: Int = A.size
+            val n: Int = B.size
+            val l = (m + n + 1) / 2
+            val r = (m + n + 2) / 2
+            return (getKth(A, 0, B, 0, l) + getKth(A, 0, B, 0, r)) / 2.0
+        }
+
+        private fun getKth(A: IntArray, aStart: Int, B: IntArray, bStart: Int, k: Int): Double {
+            if (aStart > A.size - 1) {
+                return B[bStart + k - 1].toDouble()
+            }
+            if (bStart > B.size - 1) {
+                return A[aStart + k - 1].toDouble()
+            }
+            if (k == 1) {
+                return A[aStart].coerceAtMost(B[bStart]).toDouble()
+            }
+            var aMid = Int.MAX_VALUE
+            var bMid = Int.MAX_VALUE
+            if (aStart + k / 2 - 1 < A.size) {
+                aMid = A[aStart + k / 2 - 1]
+            }
+            if (bStart + k / 2 - 1 < B.size) {
+                bMid = B[bStart + k / 2 - 1]
+            }
+            return if (aMid < bMid)
+                getKth(A, aStart + k / 2, B, bStart, k - k / 2) // Check: aRight + bLeft
+            else getKth(A, aStart, B, bStart + k / 2, k - k / 2) // Check: bRight + aLeft
+        }
+    }
 }
