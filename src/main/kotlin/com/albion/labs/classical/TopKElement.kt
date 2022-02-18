@@ -6,7 +6,7 @@ class TopKElement {
     fun topKElement(numbers: IntArray, k: Int): Int {
         val freq = makeFrequencyMap(numbers)
         val list = ArrayList<Map.Entry<Int, Int>>(freq.entries)
-        list.sortWith(Comparator { o1, o2 -> o2.value - o1.value })
+        list.sortWith { o1, o2 -> o2.value - o1.value }
         return list[k - 1].key
     }
 

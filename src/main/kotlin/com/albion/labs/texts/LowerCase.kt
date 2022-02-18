@@ -11,7 +11,7 @@ class LowerCase {
 
     fun toLowerCaseV2(str: String): String {
         return str.toCharArray()
-            .map { it.toLowerCase() }
+            .map { it.lowercaseChar() }
             .toCharArray()
             .joinToString("")
     }

@@ -7,7 +7,7 @@ class PerfectNumber {
             if (num == 1) {
                 return false
             }
-            var divisors = mutableListOf<Int>()
+            val divisors = mutableListOf<Int>()
             for (i in 1 until num) {
                 if (num % i == 0) {
                     divisors.add(i)

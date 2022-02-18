@@ -8,7 +8,7 @@ class LeadersInArray {
             for (i in arr.indices) {
                 if (i != arr.lastIndex) {
                     val cur = arr[i]
-                    val sub = (i + 1..arr.lastIndex)
+                    val sub = (((i + 1)..arr.lastIndex))
                         .map { arr[it] }
                         .toIntArray()
                     if (cur >= sub.fold(0) { acc, e -> acc + e }) {
