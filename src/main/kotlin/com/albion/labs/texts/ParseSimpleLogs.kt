@@ -24,10 +24,6 @@ class ParseSimpleLogs(private val filePath: String) {
         val base = File("./")
         val relativePath = "src/test/kotlin/com/albion/labs/texts/resources/"
         val absoluteDirectoryPath = base.absolutePath + File.separator + relativePath
-        val lines = File(absoluteDirectoryPath, filePath).readLines()
-//        for(line in lines) {
-//            println("$line")
-//        }
-        return lines
+        return File(absoluteDirectoryPath, filePath).readLines()
     }
 }
