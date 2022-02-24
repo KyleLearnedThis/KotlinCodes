@@ -21,6 +21,11 @@ class ValidParenthesesTest {
         testWork("[()[]{}]", false)
     }
 
+    @Test
+    fun testBasicV04() {
+        testWork("([)]", false)
+    }
+
     private fun testWork(input: String, expected: Boolean) {
         val actual = ValidParentheses.isValid(input)
         assertEquals(expected, actual)

@@ -1,5 +1,6 @@
 package com.albion.labs.classical
 
+// https://leetcode.com/problems/valid-parentheses/
 class ValidParentheses {
     companion object {
         fun isValid(s: String): Boolean {
@@ -11,7 +12,7 @@ class ValidParentheses {
                     stack.add('}')
                 } else if (c == '[') {
                     stack.add(']')
-                } else if (stack.isEmpty() || stack.removeAt(0) !== c) {
+                } else if (stack.isEmpty() || stack.removeAt(stack.size - 1) !== c) {
                     return false
                 }
             }
