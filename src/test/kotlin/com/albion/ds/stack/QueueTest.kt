@@ -15,6 +15,6 @@ class QueueTest {
         val expected = 5
         val actual = queue.dequeue()
         Assert.assertEquals(expected, actual)
-        Assert.assertEquals(4, queue.size())
+        Assert.assertEquals(4, queue.size)
     }
 }

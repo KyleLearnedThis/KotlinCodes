@@ -17,5 +17,5 @@ class Stack<T>{
         }
     }
 
-    fun size() = stack.size
+    var size: Int = stack.size
 }

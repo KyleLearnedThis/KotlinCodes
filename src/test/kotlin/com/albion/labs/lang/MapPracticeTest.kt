@@ -36,4 +36,17 @@ class MapPracticeTest {
            println("===== key: $key =====")
         }
     }
+
+    @Test
+    fun testSortedMap() {
+        val keys = intArrayOf(8,7,6,5,4,3,2,1)
+        val values = intArrayOf(0,1,2,3,4,5,6,7)
+        val m = MapPractice()
+
+        val result = m.sortMapByKeyV2(keys, values)
+        println("===== AFTER =====")
+        for((k,v) in result) {
+            println("===== [key: $k] [value: $v] =====")
+        }
+    }
 }

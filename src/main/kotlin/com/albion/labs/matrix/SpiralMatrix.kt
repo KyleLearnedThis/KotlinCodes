@@ -4,7 +4,7 @@ class SpiralMatrix {
     companion object {
         fun spiralOrder(matrix: Array<IntArray>): List<Int> {
             val result: MutableList<Int> = ArrayList()
-            if (matrix == null || matrix.isEmpty() || matrix[0].isEmpty()) {
+            if (matrix.isEmpty() || matrix[0].isEmpty()) {
                 return result
             }
             var d = matrix.size
