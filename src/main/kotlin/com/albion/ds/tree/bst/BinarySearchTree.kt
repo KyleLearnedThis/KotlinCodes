@@ -33,7 +33,7 @@ class BinarySearchTree<T: Comparable<T>> {
     }
 
     fun find(seek: T): TreeNode<T>? {
-        var cur = this.root
+        var cur = root
         while(cur != null) {
             val compare = seek.compareTo(cur.data)
             cur = when (compare) {

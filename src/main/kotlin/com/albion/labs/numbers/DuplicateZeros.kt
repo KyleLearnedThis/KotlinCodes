@@ -4,7 +4,7 @@ package com.albion.labs.numbers
 class DuplicateZeros {
     companion object {
         fun duplicateZeros(arr: IntArray) {
-            var result = mutableListOf<Int>()
+            val result = mutableListOf<Int>()
             for(i in arr.indices) {
                 val value = arr[i]
                 result.add(value)

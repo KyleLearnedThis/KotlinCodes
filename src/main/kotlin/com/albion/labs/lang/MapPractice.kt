@@ -22,4 +22,13 @@ class MapPractice {
     fun sortMapByKey(map: MutableMap<Int, Int>): MutableMap<Int, Int> {
         return map.toList().sortedBy { (key, _) -> key }.toMap().toMutableMap()
     }
+
+    fun sortMapByKeyV2(keys: IntArray, values: IntArray): MutableMap<Int, Int> {
+        val map = keys.zip(values).toMap().toMutableMap()
+        println("===== BEFORE =====")
+        for((k,v) in map) {
+            println("===== [key: $k] [value: $v] =====")
+        }
+        return map.toSortedMap()
+    }
 }

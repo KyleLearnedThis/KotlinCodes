@@ -16,10 +16,7 @@ class Queue<T> {
             throw RuntimeException("Empty queue")
         }
     }
+    var size: Int = queue.size
+    var isEmpty: Boolean = queue.size == 0
 
-    fun size() = queue.size
-
-    fun isEmpty(): Boolean {
-        return queue.size == 0
-    }
 }

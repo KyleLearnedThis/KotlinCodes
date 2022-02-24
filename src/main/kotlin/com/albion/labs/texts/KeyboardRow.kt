@@ -20,8 +20,10 @@ class KeyboardRow {
 
     private fun isSameRow(input: String, row: String): Boolean {
         for(i in input.indices) {
-            val x = input[i]
-            if(row.toCharArray().contains(x.toLowerCase()) || row.toCharArray().contains(x.uppercaseChar()) ) {
+            val x = input[i].lowercaseChar()
+            val rowArray = row.lowercase()
+                .toCharArray()
+            if(rowArray.contains(x) ) {
                 continue
             } else {
                 return false

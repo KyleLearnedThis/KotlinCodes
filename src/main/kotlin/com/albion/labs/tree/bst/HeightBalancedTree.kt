@@ -13,7 +13,6 @@ class HeightBalancedTree {
         if (low > high) {
             return null
         }
-
         val mid = (high + low) / 2
         val cur = TreeNode(nums[mid])
         cur.left = sortedArrayToBST(nums, low, mid - 1)

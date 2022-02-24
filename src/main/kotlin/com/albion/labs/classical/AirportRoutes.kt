@@ -16,13 +16,13 @@ class AirportRoutes(private val shortTrips: Array<Array<String>> ){
         list.add(startingPoint)
 
         var here = startingPoint
-        routeMap.forEach { _ ->
+        do {
             val next = routeMap.getOrDefault(here, "")
             if(next.isNotEmpty()){
                 list.add(next)
                 here = next
             }
-        }
+        } while(next.isNotEmpty())
         return list
     }
 

@@ -15,6 +15,6 @@ class StackTest {
         val expected = 1
         val actual = stack.pop()
         Assert.assertEquals(expected, actual)
-        Assert.assertEquals(4, stack.size())
+        Assert.assertEquals(4, stack.size)
     }
 }

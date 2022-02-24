@@ -16,6 +16,6 @@ class AirportRoutesTest {
         val airportRoutes = AirportRoutes(input)
         val actual = airportRoutes.makeRoutes()
         val expected = mutableListOf("SFO", "YVR", "JFK", "CDG", "HEL")
-        Assert.assertEquals(actual, expected)
+        Assert.assertEquals(expected,actual)
     }
 }
