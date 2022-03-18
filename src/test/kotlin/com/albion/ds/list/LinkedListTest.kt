@@ -3,12 +3,12 @@ package com.albion.ds.list
 import org.junit.Assert
 import org.junit.Test
 
-class ListTest {
+class LinkedListTest {
 
     @Test
     fun testAppend() {
         val input = arrayOf(5, 4, 3, 2, 1)
-        val list = com.albion.ds.list.List(input)
+        val list = LinkedList(input)
         println("===== printList =====")
         list.printList()
         println("===== printListReverse =====")
@@ -18,7 +18,7 @@ class ListTest {
     @Test
     fun testSize() {
         val input = arrayOf(5, 4, 3, 2, 1)
-        val list = com.albion.ds.list.List(input)
+        val list = LinkedList(input)
         val actual = list.size()
         val expected = 5
         Assert.assertEquals(actual,expected)
