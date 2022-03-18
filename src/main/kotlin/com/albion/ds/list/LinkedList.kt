@@ -1,7 +1,6 @@
 package com.albion.ds.list
 
-class List<T>(input: Array<T>) {
-    var head: ListNode<T>? = null
+class LinkedList<T>(input: Array<T>): BaseList<T>() {
     var tail: ListNode<T>? = null
 
     init {
@@ -20,16 +19,6 @@ class List<T>(input: Array<T>) {
             cur.prev = tail
             tail = cur
         }
-    }
-
-    fun printList() {
-        var cur = head
-        while (cur != null) {
-            val data = cur.data
-            print("[$data] ")
-            cur = cur.next
-        }
-        println("")
     }
 
     fun printListReverse() {
